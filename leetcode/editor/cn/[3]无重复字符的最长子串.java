@@ -39,7 +39,7 @@
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class LengthOfLongestSubstringSolution {
     public int lengthOfLongestSubstring(String s) {
     return 1;
     }

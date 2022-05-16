@@ -46,11 +46,7 @@
 import java.util.HashMap;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-
-/**
- * 两数之和
- */
-class Solution {
+class TwoSumSolution {
 
     /**
      * 解法一: 双重for
