@@ -1,0 +1,53 @@
+**思路分析**
+因为输入的两个链表都是**逆序存储数字**的位数的，因此两个链表中同一位置的数字可以直接相加。不是直接相加而是定义一个中间变量carry存储两位相加的值，但是在用中间变量累加前需要判断此链表不为空（就是为了避免长度不一样），为空的时候就不进行累加即：
+
+* 
+
+```
+/* 只要不为空就继续求和 */
+if(l1 != NULL) carry += l1->val;
+if(l2 != NULL) carry += l2->val;
+```
+
+然后将以**carry%10**的值定义一个新的结点将其插入到**虚拟头节点**的后面这样就可以得到两节点求和后在新链表重的值，然后计算**carry/10**有进位值的话就直接**累加到下次的计算当中**。
+注意：此外，如果链表遍历结束后，有 carry>0，还需要在答案链表的后面附加一个节点，节点的值为 carry。所以判断有没有遍历完是while(l1 || l2 || carry)而不是while(l1 || l2)
+**具体代码如下：**
+
+* 
+
+```
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        /* 定义一个新的链表用于存储求和的结果 */
+        ListNode* dummyHead = new ListNode(0);
+        ListNode* cur = dummyHead;
+        /* 定义一个变量用于保存进位 */
+        int carry = 0;
+
+        /* 因为不知道l1和l2的长短所以只要有一个没有遍历完就继续遍历 遍历完的就不执行 */
+        /* 
+         * 第一次写while(l1 || l2)会错因为漏掉了最后一个进位《== 特别哟注意
+        */
+        while(l1 || l2 || carry){
+            /* 只要不为空就继续求和 */
+            if(l1 != NULL) carry += l1->val;
+            if(l2 != NULL) carry += l2->val;
+            /* 创建一个节点插入到新的链表并且值初始化为l1->val+l2->val的个位数 */
+            ListNode* tmp = new ListNode(carry%10);
+            /* 插入结点tmp因为是从头开始插入所以只需要每次更新cur */
+            cur->next = tmp;
+            cur = cur->next;
+            /* 只要链表不为空就继续遍历下一个节点 */
+            if(l1 != NULL) l1 = l1->next;
+            if(l2 != NULL) l2 = l2->next;
+            /* 获取上个节点的进位值 加到下个节点的运算中 */
+            carry /= 10;
+        }
+        /* 注意这里不返回dummyHead因为这里相当于一个虚拟头节点 下一个才是正真的头节点 */
+        return dummyHead->next;
+    }
+};
+
+```
+

@@ -1,0 +1,48 @@
+# 思路
+
+首先明确nums数组是无序的，所以排除了左右指针和二分搜索的思路（原因是这两个方法的前提是要求数组是有序的，即使数组被排序过后，索引就乱了！），所以使用最基本的两种解法：
+- 双重for
+- 用一个HashMap来替换掉一个for循环
+
+## 双重for
+
+* java
+
+```java
+public class Solution1 {
+    public int[] twoSum(int[] nums, int target) {
+        for(int i=0;i<nums.length;i++){
+            for(int j=i+1;j<nums.length;j++){
+                if(target-nums[i]==nums[j]){
+                    return new int[]{i,j};
+                }
+            }
+        }
+        return null;
+    }
+}
+
+```
+
+## HashMap
+
+* java
+
+```java
+public class Solution2 {
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer,Integer> map=new HashMap();
+        for(int i=0;i<nums.length;i++){
+            map.put(nums[i],i);
+        }
+        for(int i=0;i<nums.length;i++){
+            int tem=target-nums[i];
+            if(map.containsKey(tem)&&map.get(tem)!=i){
+                return new int[]{i,map.get(tem)};
+            }
+        }
+        return null;
+    }
+}
+```
+
