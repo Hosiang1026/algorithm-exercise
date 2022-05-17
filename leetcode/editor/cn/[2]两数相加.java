@@ -39,8 +39,49 @@
 // 
 // Related Topics 递归 链表 数学 👍 8083 👎 0
 
+/**
+ * 科普二级制的原码、反码、补码
+ * https://www.itcast.cn/news/20210120/17014965286.shtml
+ *
+ * 1. 原码
+ * 原码就是符号位加上真值的绝对值，即用第一位表示符号，其余位表示值。比如如果是8位二进制：
+ *
+ * [+1](原码) = 0000 0001
+ *
+ * [-1](原码) = 1000 0001
+ *
+ * 第一位是符号位。因为第一位是符号位，所以8位二进制数的取值范围就是：
+ *
+ * [1111 1111 , 0111 1111]
+ *
+ * 即
+ *
+ * [-127 , 127]
+ *
+ * 原码是人脑最容易理解和计算的表示方式。
+ *
+ * 2. 反码
+ * 反码的表示方法是: 正数的反码是其本身，负数的反码是在其原码的基础上，符号位不变，其余各个位取反。
+ *
+ * [+1] = [00000001](原码)= [00000001](反码)
+ *
+ * [-1] = [10000001](原码)= [11111110](反码)
+ *
+ * 可见如果一个反码表示的是负数，人脑无法直观的看出来它的数值。通常要将其转换成原码再计算。
+ *
+ * 3. 补码
+ * 补码的表示方法是：正数的补码就是其本身，负数的补码是在其原码的基础上，符号位不变，其余各位取反，最后+1 (即在反码的基础上+1)。
+ *
+ * [+1] = [00000001](原码) = [00000001](反码) = [00000001](补码)
+ *
+ * [-1] = [10000001](原码) = [11111110](反码) = [11111111](补码)
+ *
+ * 对于负数，补码表示方式也是人脑无法直观看出其数值的。通常也需要转换成原码在计算其数值。
+ */
+
 
 //leetcode submit region begin(Prohibit modification and deletion)
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -52,8 +93,64 @@
  * }
  */
 class AddTwoNumbersSolution {
-    /*public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-     return null;
-    }*/
+
+    private static class ListNode {
+        int val;
+        ListNode next;
+        ListNode() {}
+        ListNode(int val) {
+            this.val = val;
+        }
+        ListNode(int val, ListNode next) {
+            this.val = val; this.next = next;
+        }
+
+        public void add (ListNode node){
+            this.next = node ;
+        }
+
+    }
+
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        // 起始节点
+        ListNode start = new ListNode();
+        ListNode listNode = start;
+
+        // 是否进1
+        int carry = 0;
+        while (l1 != null || l2 != null || carry != 0) {
+            // 高位开始计算 就正好是 两数的反转数相加
+            // 2 4 9
+            // +5 6 4 9
+            // 如果反过来看，是不是就正好是
+            // 9 4 6 5
+            // + 9 4 2 //
+            // 可能不存在
+            int num1 = l1 != null ? l1.val : 0;
+            // 可能不存在
+            int num2 = l2 != null ? l2.val : 0;
+            int sum = num1 + num2 + carry;
+            // 考虑是否 进1 的问题
+            carry = sum >= 10 ? 1 : 0;
+            listNode.next = new ListNode(sum % 10);
+            listNode = listNode.next;
+            if (l1 != null) {
+                l1 = l1.next;
+            } if (l2 != null) {
+                l2 = l2.next;
+            } }
+        return start.next;
+    }
+
+    public static void main(String[] args) {
+        ListNode l1 = new ListNode(2);
+        ListNode node2 = new ListNode(4);
+        ListNode node3 = new ListNode(9);
+        l1.add(node2);
+        node2.add(node3);
+
+        ListNode l2 = new ListNode();
+        addTwoNumbers(l1, l2);
+    }
 }
 //leetcode submit region end(Prohibit modification and deletion)
