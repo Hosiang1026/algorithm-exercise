@@ -54,7 +54,7 @@ class TwoSumSolution {
      * @param target
      * @return
      */
-    /*public int[] twoSum(int[] nums, int target) {
+    public int[] twoSum(int[] nums, int target) {
         if (nums == null) {
             return null;
         }
@@ -66,7 +66,7 @@ class TwoSumSolution {
             }
         }
         return null;
-    }*/
+    }
 
     /**
      * 解法二: 双指针
@@ -74,7 +74,7 @@ class TwoSumSolution {
      * @param target
      * @return
      */
-    /*public int[] twoSum(int[] nums, int target) {
+    public int[] twoSum2(int[] nums, int target) {
         if (nums == null) {
             return null;
         }
@@ -90,7 +90,7 @@ class TwoSumSolution {
             }
         }
         return null;
-    }*/
+    }
 
     /**
      * 解法三: 双重for
@@ -98,7 +98,7 @@ class TwoSumSolution {
      * @param target
      * @return
      */
-    public int[] twoSum(int[] nums, int target) {
+    public int[] twoSum3(int[] nums, int target) {
         if (nums == null) {
             return null;
         }

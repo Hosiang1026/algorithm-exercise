@@ -38,10 +38,28 @@
 // Related Topics 哈希表 字符串 滑动窗口 👍 7581 👎 0
 
 
+import java.util.HashMap;
+
 //leetcode submit region begin(Prohibit modification and deletion)
 class LengthOfLongestSubstringSolution {
     public int lengthOfLongestSubstring(String s) {
-    return 1;
+        int n = s.length(), ans = 0;
+        HashMap<Character, Integer> map = new HashMap<>();
+        for (int start = 0, end = 0; end < n; end++) {
+            char alpha = s.charAt(end);
+            if (map.containsKey(alpha)){
+                start = Math.max(map.get(alpha), start);
+            }
+            ans = Math.max(ans, end - start + 1);
+            map.put(alpha, end+1);
+        }
+        return ans;
     }
+
+    /*public static void main(String[] args) {
+        String s = "abcdcccc";
+        int res = lengthOfLongestSubstring(s);
+        System.out.printf("res --"+ res);
+    }*/
 }
 //leetcode submit region end(Prohibit modification and deletion)

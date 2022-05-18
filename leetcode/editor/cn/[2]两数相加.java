@@ -111,7 +111,7 @@ class AddTwoNumbersSolution {
 
     }
 
-    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         // 起始节点
         ListNode start = new ListNode();
         ListNode listNode = start;
@@ -142,15 +142,20 @@ class AddTwoNumbersSolution {
         return start.next;
     }
 
-    public static void main(String[] args) {
+/*    public static void main(String[] args) {
         ListNode l1 = new ListNode(2);
         ListNode node2 = new ListNode(4);
         ListNode node3 = new ListNode(9);
         l1.add(node2);
         node2.add(node3);
 
-        ListNode l2 = new ListNode();
+        ListNode l2 = new ListNode(5);
+        ListNode node4 = new ListNode(6);
+        ListNode node5 = new ListNode(4);
+        l2.add(node4);
+        l2.add(node5);
+
         addTwoNumbers(l1, l2);
-    }
+    }*/
 }
 //leetcode submit region end(Prohibit modification and deletion)
