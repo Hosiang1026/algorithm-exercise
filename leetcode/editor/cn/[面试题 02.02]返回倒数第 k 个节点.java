@@ -22,10 +22,32 @@
  *     ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+class KthToLastSolution {
 
     public int kthToLast(ListNode head, int k) {
-     return 0;
+        ListNode fast = head;
+        for (int i = 0; i < k; i++) {
+            fast = fast.next;
+        }
+        ListNode slow = head;
+        while (null != fast){
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow.val;
     }
+
+    /*public static void main(String[] args) {
+        ListNode head = new ListNode(1);
+        ListNode node1 = new ListNode(2);
+        ListNode node2 = new ListNode(3);
+        ListNode node3 = new ListNode(4);
+        ListNode node4 = new ListNode(5);
+        head.addNext(node1);
+        node1.addNext(node2);
+        node2.addNext(node3);
+        node3.addNext(node4);
+        kthToLast(head, 2);
+    }*/
 }
 //leetcode submit region end(Prohibit modification and deletion)

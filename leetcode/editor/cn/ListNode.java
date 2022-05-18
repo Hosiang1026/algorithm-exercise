@@ -9,7 +9,7 @@ public class ListNode {
         this.val = val; this.next = next;
     }
 
-    public void add (ListNode node){
+    public void addNext (ListNode node){
         this.next = node ;
     }
 }

@@ -129,14 +129,14 @@ class AddTwoNumbersSolution {
         ListNode l1 = new ListNode(2);
         ListNode node2 = new ListNode(4);
         ListNode node3 = new ListNode(9);
-        l1.add(node2);
-        node2.add(node3);
+        l1.addNext(node2);
+        node2.addNext(node3);
 
         ListNode l2 = new ListNode(5);
         ListNode node4 = new ListNode(6);
         ListNode node5 = new ListNode(4);
-        l2.add(node4);
-        l2.add(node5);
+        l2.addNext(node4);
+        l2.addNext(node5);
 
         addTwoNumbers(l1, l2);
     }*/
