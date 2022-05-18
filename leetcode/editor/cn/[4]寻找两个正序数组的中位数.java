@@ -38,6 +38,10 @@
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
+
+/**
+ * todo
+ */
 class FindMedianSortedArraysSolution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
      return 0.0;

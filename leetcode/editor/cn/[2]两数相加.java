@@ -94,23 +94,6 @@
  */
 class AddTwoNumbersSolution {
 
-    private static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) {
-            this.val = val;
-        }
-        ListNode(int val, ListNode next) {
-            this.val = val; this.next = next;
-        }
-
-        public void add (ListNode node){
-            this.next = node ;
-        }
-
-    }
-
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         // 起始节点
         ListNode start = new ListNode();

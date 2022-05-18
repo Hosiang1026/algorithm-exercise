@@ -45,6 +45,9 @@
 
 import java.util.HashMap;
 
+/**
+ * 双指针主要用于遍历数组，两个指针指向不同的元素，从而协同完成任务。
+ */
 //leetcode submit region begin(Prohibit modification and deletion)
 class TwoSumSolution {
 
