@@ -3,6 +3,39 @@
   <component name="LeetcodeEditor">
     <option name="projectConfig">
       <map>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/[1184]公交站间的距离.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/leetcode/editor/cn/doc/content/[1184]公交站间的距离.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1184" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/[1184]公交站间的距离.java" />
+              <option name="titleSlug" value="distance-between-bus-stops" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/[1332]删除回文子序列.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/leetcode/editor/cn/doc/content/[1332]删除回文子序列.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1332" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/[1332]删除回文子序列.java" />
+              <option name="titleSlug" value="remove-palindromic-subsequences" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/[141]环形链表.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/leetcode/editor/cn/doc/content/[141]环形链表.md" />
+              <option name="frontendQuestionId" value="leetcode.cn141" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/[141]环形链表.java" />
+              <option name="titleSlug" value="linked-list-cycle" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/[1]两数之和.java">
           <value>
             <LeetcodeEditor>
@@ -69,6 +102,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/[705]设计哈希集合.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/leetcode/editor/cn/doc/content/[705]设计哈希集合.md" />
+              <option name="frontendQuestionId" value="leetcode.cn705" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/[705]设计哈希集合.java" />
+              <option name="titleSlug" value="design-hashset" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/[面试题 02.02]返回倒数第 k 个节点.java">
           <value>
             <LeetcodeEditor>
@@ -77,6 +121,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/[面试题 02.02]返回倒数第 k 个节点.java" />
               <option name="titleSlug" value="kth-node-from-end-of-list-lcci" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/[面试题 02.07]链表相交.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/leetcode/editor/cn/doc/content/[面试题 02.07]链表相交.md" />
+              <option name="frontendQuestionId" value="leetcode.cn面试题 02.07" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/[面试题 02.07]链表相交.java" />
+              <option name="titleSlug" value="intersection-of-two-linked-lists-lcci" />
             </LeetcodeEditor>
           </value>
         </entry>
